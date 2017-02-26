@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<title>玩转金院</title>
+	<style type="text/css">
+		@media screen and (min-width: 320px) {
+    		html {font-size: 14px;}
+		}
+ 
+		@media screen and (min-width: 360px) {
+		    html {font-size: 16px;}
+		}
+		 
+		@media screen and (min-width: 400px) {
+		    html {font-size: 18px;}
+		}
+		 
+		@media screen and (min-width: 440px) {
+		    html {font-size: 20px;}
+		}
+		 
+		@media screen and (min-width: 480px) {
+		    html {font-size: 22px;}
+		}
+		 
+		@media screen and (min-width: 640px) {
+		    html {font-size: 28px;}
+		}
+		body {
+			margin: 0;
+			padding: 0;
+		}
+		@font-face {
+            font-family: 'Metrize-Icons';
+            src: url('fonts/Metrize-Icons.eot');
+            src: url('fonts/Metrize-Icons.eot#iefix') format('embedded-opentype'), 
+                 url('fonts/Metrize-Icons.ttf') format('truetype'), 
+                 url('fonts/Metrize-Icons.woff') format('woff'), 
+                 url('fonts/Metrize-Icons.svg#Metrize-Icons') format('svg');
+            font-weight: normal;
+            font-style: normal;
+        }
+		.search {
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+			height: 2.5rem;
+			background-color: #777;
+		}
+		.search > input {
+			height: 1.8rem;
+			border: none;
+			border-radius: 0.5rem;
+			width: 75%;
+			outline: none;
+			padding: 0 0.4rem 0 0.4rem;
+		}
+		.user {
+			position: relative;
+			height: 15rem;
+			background-color: #999;
+		}
+		.icon {
+			position: absolute;
+			margin-left: -3rem;
+			left: 50%;
+			top: 3rem;
+			width: 6rem;
+			height: 6rem;
+			background-color: #ddd;
+			border-radius: 50%;
+			border: 1px solid #555;
+		}
+		.icon > p {
+			font-size: 1.5rem;
+			width: 3rem;
+			font-family: Microsoft YaHei;
+			margin: 1rem auto 0 auto;
+			color: #999;
+		}
+		.account {
+			position: absolute;
+			width: 10rem;
+			margin-left: -5rem;
+			left: 50%;
+			top: 12rem;
+		}
+		.account > a {
+			display: block;
+			width: 50%;
+			text-decoration: none;
+			color: #eee;
+			font-family: Microsoft YaHei;
+			float: left;
+			text-align: center;
+		}
+		.account:before {
+			position: absolute;
+			margin-top: -0.5rem;
+			left: 50%;
+			top: 50%;
+			content: "";
+			height: 1rem;
+			width: 0;
+			border: 1px solid #555;
+		}
+		.nav {
+			background-color: #eee;
+		}
+		.nav > a {
+			position: relative;
+			display: block;
+			text-decoration: none;
+			height: 50%;
+			width: 50%;
+			float: left;
+			background-color: #eee;
+			box-shadow: inset 0px 0px 1px #555;
+		}
+		.nav > a > p:nth-of-type(1) {
+			margin: 7rem auto 0 auto;
+			width: 5rem;
+			text-align: center;
+			background-color: transparent;
+			color: #555;
+			font-family: Microsoft YaHei;
+		}
+		.nav > a:before {
+			position: absolute;
+			margin-left: -1rem;
+			left: 50%;
+			top: 3.5rem;
+			font-size: 2rem;
+			color: #333;
+		}
+		.nav > a:nth-of-type(1):before {
+			font-family:"Metrize-Icons"; 
+			content: "\e0a9";
+		}
+		.nav > a:nth-of-type(2):before {
+			font-family:"Metrize-Icons"; 
+			content: "\e000";
+		}
+		.nav > a:nth-of-type(3):before {
+			font-family:"Metrize-Icons"; 
+			content: "\e0ac";
+		}
+		.nav > a:nth-of-type(4):before {
+			font-family:"Metrize-Icons"; 
+			content: "\e0ad";
+		}  
+	</style>
+	<script src="js/jquery-3.1.1.js"></script>
+	<script type="text/javascript">
+	$(function() {
+		//开始写JQ
+		var hSearch = $(".search").height(),
+			hUser = $(".user").height(),
+			hNav = "",
+			hWin = window.innerHeight;
+		hNav += hWin - hSearch - hUser; //填满整屏
+		$(".nav").css("height",hNav + "px");
+	})
+	</script>
+</head>
+<body>
+	<div id="page">
+		<div class="search">
+			<input type="text" name="search" placeholder="搜索">
+		</div>
+		<div class="user">
+			<div class="icon">
+				<p>玩转金院</p>
+			</div>
+			<div class="account">
+				<a href="">登录</a>
+				<a href="">注册</a>
+			</div>
+		</div>
+		<div class="nav">
+			<a href="">
+				<p>教务系统</p>
+			</a>
+			<a href="">
+				<p>校园支付</p>
+			</a>
+			<a href="">
+				<p>校园生活</p>
+			</a>
+			<a href="">
+				<p>拓展应用</p>
+			</a>
+		</div>		
+	</div>
+</body>
+</html>
