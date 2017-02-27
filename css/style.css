@@ -1,0 +1,183 @@
+@media screen and (min-width: 320px) {
+    		html {font-size: 14px;}
+		}
+ 
+		@media screen and (min-width: 360px) {
+		    html {font-size: 16px;}
+		}
+		 
+		@media screen and (min-width: 400px) {
+		    html {font-size: 18px;}
+		}
+		 
+		@media screen and (min-width: 440px) {
+		    html {font-size: 20px;}
+		}
+		 
+		@media screen and (min-width: 480px) {
+		    html {font-size: 22px;}
+		}
+		 
+		@media screen and (min-width: 640px) {
+		    html {font-size: 28px;}
+		}
+		body {
+			margin: 0;
+			padding: 0;
+		}
+		@font-face {
+            font-family: 'Metrize-Icons';
+            src: url('../fonts/Metrize-Icons.eot');
+            src: url('../fonts/Metrize-Icons.eot#iefix') format('embedded-opentype'), 
+                 url('../fonts/Metrize-Icons.ttf') format('truetype'), 
+                 url('../fonts/Metrize-Icons.woff') format('woff'), 
+                 url('../fonts/Metrize-Icons.svg#Metrize-Icons') format('svg');
+            font-weight: normal;
+            font-style: normal;
+        }
+        #page {
+        	background: -webkit-linear-gradient(#084fff,#08feff);
+        	background: -o-linear-gradient(#084fff,#08feff);
+        	background: -moz-linear-gradient(#084fff,#08feff);
+        	background: linear-gradient(#084fff,#08feff);
+        }
+		.search {
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+			height: 2.5rem;
+			background-color: transparent;
+		}
+		.search > input {
+			height: 1.8rem;
+			border: none;
+			border-radius: 0.5rem;
+			width: 75%;
+			outline: none;
+			padding: 0 0.4rem 0 0.4rem;
+		}
+		.user {
+			position: relative;
+			height: 15rem;
+			background-color: transparent;
+			box-shadow: 0 5px 10px #777;
+			z-index: 98;
+			border: none;
+		}
+		.icon {
+			position: absolute;
+			margin-left: -3rem;
+			left: 50%;
+			top: 3rem;
+			width: 6rem;
+			height: 6rem;
+			background-color: rgba(255,255,255,0.3);
+			border-radius: 50%;
+			border: 1px solid #111;
+		}
+		.icon > p {
+			font-size: 1.5rem;
+			width: 3rem;
+			font-family: Microsoft YaHei;
+			margin: 1rem auto 0 auto;
+			color: #fff;
+		}
+		.account {
+			position: absolute;
+			width: 10rem;
+			margin-left: -5rem;
+			left: 50%;
+			top: 12rem;
+		}
+		.account > a {
+			display: block;
+			width: 50%;
+			text-decoration: none;
+			color: #fff;
+			font-family: Microsoft YaHei;
+			float: left;
+			text-align: center;
+		}
+		.account:before {
+			position: absolute;
+			margin-top: -0.5rem;
+			left: 50%;
+			top: 50%;
+			content: "";
+			height: 1rem;
+			width: 0;
+			border: 1px solid #fff;
+		}
+		.nav {
+			position: relative;
+			background-color: #fff;
+		}
+		.nav:before {
+			position: absolute;
+			margin-left:-7.5rem;  
+			margin-top: -1px;
+			top: 50%;
+			left: 50%;
+			content: "";
+			width: 15rem;
+			height: 2px;
+			z-index: 99;
+			background: -webkit-linear-gradient(left,#eee,#eee,#777,#eee,#eee);
+		}
+		.nav:after {
+			position: absolute;
+			margin-top:-7.5rem;  
+			margin-left: -1px;
+			top: 50%;
+			left: 50%;
+			content: "";
+			width: 2px;
+			height: 15rem;
+			background: -webkit-linear-gradient(#eee,#eee,#777,#eee,#eee);
+			z-index: 99;
+		}
+		.nav > a {
+			position: relative;
+			display: block;
+			text-decoration: none;
+			height: 50%;
+			width: 50%;
+			float: left;
+			background-color: #eee;
+		}
+		.nav > a > p:nth-of-type(1) {
+			margin: 7rem auto 0 auto;
+			width: 5rem;
+			text-align: center;
+			background-color: transparent;
+			color: #555;
+			font-family: Microsoft YaHei;
+		}
+		.nav > a:before {
+			position: absolute;
+			margin-left: -1rem;
+			left: 50%;
+			top: 3.5rem;
+			font-size: 2rem;
+			color: #333;
+		}
+		.nav > a:nth-of-type(1):before {
+			font-family:"Metrize-Icons"; 
+			content: "\e0a9";
+			color: #0cacff;
+		}
+		.nav > a:nth-of-type(2):before {
+			font-family:"Metrize-Icons"; 
+			content: "\e000";
+			color: #0cacff;
+		}
+		.nav > a:nth-of-type(3):before {
+			font-family:"Metrize-Icons"; 
+			content: "\e0ac";
+			color: #0dd7ff;
+		}
+		.nav > a:nth-of-type(4):before {
+			font-family:"Metrize-Icons"; 
+			content: "\e0ad";
+			color: #0dd7ff;
+		}
