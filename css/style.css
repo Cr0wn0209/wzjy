@@ -150,7 +150,7 @@
 			background-color: #eee;
 		}
 		.nav > a > p:nth-of-type(1) {
-			margin: 7rem auto 0 auto;
+			margin: 60% auto 0 auto;
 			width: 5rem;
 			text-align: center;
 			background-color: transparent;
@@ -161,7 +161,7 @@
 			position: absolute;
 			margin-left: -1rem;
 			left: 50%;
-			top: 3.5rem;
+			top: 30%;
 			font-size: 2rem;
 			color: #333;
 		}
