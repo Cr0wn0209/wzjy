@@ -14,13 +14,69 @@
 			hUser = $(".user").height(),
 			hNav = "",
 			hWin = window.innerHeight;
+			wWin = window.innerWidth;
 		hNav += hWin - hSearch - hUser; //填满整屏
 		$(".nav").css("height",hNav + "px");
+		$("#sideNav").css("height",hWin + "px");
+		$("#sideNav").css("width",wWin*0.9 + "px");
+		$("#sideNav").css("left",-wWin + "px");
+		/*
+		$("#sideButton").click(function() {
+			$("#sideNav").css("left","0");
+			$("#sideButton").css("left",wWin*0.89 + "px");
+			$("#mask").css("opacity", "0.7");	
+			$("#mask").css("z-index","5");
+			$(".midLine").css("width","1.25rem");
+		});
+		$("#mask").click(function() {
+			$("#sideNav").css("left",-wWin + "px");
+			$("#sideButton").css("left","0");
+			$("#mask").css("opacity", "0");	
+			$("#mask").css("z-index","-1");
+			$(".midLine").css("width","1rem");
+		})
+		*/
+		var sideSwitch = 0;
+		$("#sideButton").click(function() {	
+			if (sideSwitch == 0) {
+				$("#sideNav").css("left","0");
+				$("#sideButton").css("left",wWin*0.89 + "px");
+				$("#mask").css("z-index","5");
+				$("#mask").css("opacity", "0.7");	
+				$(".midLine").css("width","1.25rem");
+				$(".midLine").css("opacity","0");
+				$(".topLine").css("top","1.25rem");
+				$(".topLine").css("transform","rotateZ(45deg) scale(1.414)");
+				$(".bottomLine").css("top","1.25rem");
+				$(".bottomLine").css("transform","rotateZ(-45deg) scale(1.414)");
+				sideSwitch = 1;
+			} else if (sideSwitch == 1) {
+				$("#sideNav").css("left",-wWin + "px");
+				$("#sideButton").css("left","0");
+				$("#mask").css("opacity", "0");	
+				$("#mask").css("z-index","-1");
+				$(".midLine").css("width","1rem");
+				$(".midLine").css("opacity","1");
+				$(".topLine").css("top","0.75rem");
+				$(".topLine").css("transform","rotateZ(0deg) scale(1)");
+				$(".bottomLine").css("top","1.75rem");
+				$(".bottomLine").css("transform","rotateZ(0deg) scale(1)");
+				sideSwitch = 0;
+			}
+		});
 	})
 	</script>
 </head>
 <body>
 	<div id="page">
+		<div id="mask"></div>
+		<div id="sideButton">
+			<div class="line">
+				<div class="topLine"></div>
+				<div class="midLine"></div>
+				<div class="bottomLine"></div>
+			</div>
+		</div>
 		<div class="search">
 			<input type="text" name="search" placeholder="搜索">
 		</div>
@@ -47,6 +103,9 @@
 				<p>拓展应用</p>
 			</a>
 		</div>		
+	</div>
+	<div id="sideNav">
+		侧边栏
 	</div>
 </body>
 </html>

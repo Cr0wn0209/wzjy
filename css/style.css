@@ -52,7 +52,7 @@
 			height: 1.8rem;
 			border: none;
 			border-radius: 0.5rem;
-			width: 75%;
+			width: 73%;
 			outline: none;
 			padding: 0 0.4rem;
 		}
@@ -119,11 +119,11 @@
 			content: "";
 			width: 15rem;
 			height: 1px;
-			background: -webkit-linear-gradient(left,#eee,#999,#666,#999,#eee);
-			background: -o-linear-gradient(left,#eee,#999,#666,#999,#eee);
-			background: -moz-linear-gradient(left,#eee,#999,#666,#999,#eee);
-			background: linear-gradient(left,#eee,#999,#666,#999,#eee);
-			z-index: 99;
+			background: -webkit-linear-gradient(left,rgba(0,0,0,0),#666,rgba(0,0,0,0));
+			background: -o-linear-gradient(left,rgba(0,0,0,0),#666,rgba(0,0,0,0)e);
+			background: -moz-linear-gradient(left,rgba(0,0,0,0),#666,rgba(0,0,0,0)e);
+			background: linear-gradient(left,rgba(0,0,0,0)9,#666,rgba(0,0,0,0));
+			z-index: 2;
 		}
 		.nav:after {
 			position: absolute;
@@ -134,11 +134,11 @@
 			content: "";
 			width: 1px;
 			height: 12rem;
-			background: -webkit-linear-gradient(#eee,#999,#666,#999,#eee);
-			background: -o-linear-gradient(#eee,#999,#666,#999,#eee);
-			background: -moz-linear-gradient(#eee,#999,#666,#999,#eee);
-			background: linear-gradient(#eee,#999,#666,#999,#eee);
-			z-index: 99;
+			background: -webkit-linear-gradient(rgba(0,0,0,0),#666,rgba(0,0,0,0));
+			background: -o-linear-gradient(rgba(0,0,0,0),#666,rgba(0,0,0,0));
+			background: -moz-linear-gradient(rgba(0,0,0,0)9,#666,rgba(0,0,0,0));
+			background: linear-gradient(rgba(0,0,0,0),#666,rgba(0,0,0,0));
+			z-index: 2;
 		}
 		.nav > a {
 			position: relative;
@@ -180,4 +180,67 @@
 		.nav > a:nth-of-type(4):before {
 			font-family:"Metrize-Icons"; 
 			content: "\e0ad";
+		}
+		#mask {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			opacity: 0;
+			z-index: -1;
+			background-color: #111;
+			transition: all .5s;
+		}
+		#sideNav {
+			background-color: #eee;
+			position: absolute;
+			top: 0;
+			color: #084fff;
+			font-size: 5rem;
+			z-index: 98;
+			transition: all .6s;
+			box-shadow: 1px 1px 1px #555;
+		}
+		#sideButton {
+			position: absolute;
+			left: 0;
+			z-index: 99;
+			height: 2.5rem;
+			width: 2.5rem;
+			background-color: transparent;
+			transition: all .6s;
+		}
+		.line {
+			position: relative;
+			height: 2.5rem;
+			width: 2.5rem;
+		}
+		.midLine {
+			position: absolute;
+			top: 1.25rem;
+			left: 0.75rem;
+			width: 1rem;
+			height: 2px;
+			margin-top: -1px;
+			background-color: white;
+			transition: all .5s;
+		}
+		.topLine {
+			position: absolute;
+			top: 0.75rem;
+			left: 0.75rem;
+			width: 1.25rem;
+			height: 2px;
+			margin-top: -1px;
+			background-color: white;
+			transition: all .5s;
+		}
+		.bottomLine {
+			position: absolute;
+			top: 1.75rem;
+			left: 0.75rem;
+			width: 1.25rem;
+			height: 2px;
+			margin-top: -1px;
+			background-color: white;
+			transition: all .5s;
 		}
