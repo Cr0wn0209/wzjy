@@ -9,9 +9,9 @@
 	<script src="js/jquery-3.1.1.js"></script>
 	<script type="text/javascript">
 	$(function() {
-		//开始写JQ
+		//JQuery
 		var hSearch = $(".search").height(),
-			hUser = $(".user").height(),
+			hUser = $(".slideShow").height(),
 			hNav = "",
 			hWin = window.innerHeight;
 			wWin = window.innerWidth;
@@ -20,48 +20,44 @@
 		$("#sideNav").css("height",hWin + "px");
 		$("#sideNav").css("width",wWin*0.9 + "px");
 		$("#sideNav").css("left",-wWin + "px");
-		/*
-		$("#sideButton").click(function() {
-			$("#sideNav").css("left","0");
-			$("#sideButton").css("left",wWin*0.89 + "px");
-			$("#mask").css("opacity", "0.7");	
-			$("#mask").css("z-index","5");
-			$(".midLine").css("width","1.25rem");
-		});
-		$("#mask").click(function() {
-			$("#sideNav").css("left",-wWin + "px");
-			$("#sideButton").css("left","0");
-			$("#mask").css("opacity", "0");	
-			$("#mask").css("z-index","-1");
-			$(".midLine").css("width","1rem");
-		})
-		*/
+		//侧边栏按钮
 		var sideSwitch = 0;
 		$("#sideButton").click(function() {	
 			if (sideSwitch == 0) {
 				$("#sideNav").css("left","0");
 				$("#sideButton").css("left",wWin*0.89 + "px");
-				$("#mask").css("z-index","5");
-				$("#mask").css("opacity", "0.7");	
-				$(".midLine").css("width","1.25rem");
-				$(".midLine").css("opacity","0");
-				$(".topLine").css("top","1.25rem");
-				$(".topLine").css("transform","rotateZ(45deg) scale(1.414)");
-				$(".bottomLine").css("top","1.25rem");
-				$(".bottomLine").css("transform","rotateZ(-45deg) scale(1.414)");
+				$("#mask").css("z-index","5").css("opacity", "0.7");
+				$(".midLine").css("width","1.25rem").css("opacity","0");
+				$(".topLine").css("top","1.25rem").css("transform","rotateZ(45deg) scale(1.414)");
+				$(".bottomLine").css("top","1.25rem").css("transform","rotateZ(-45deg) scale(1.414)");
+				$("#searchButton").css("opacity","0");
 				sideSwitch = 1;
 			} else if (sideSwitch == 1) {
 				$("#sideNav").css("left",-wWin + "px");
 				$("#sideButton").css("left","0");
-				$("#mask").css("opacity", "0");	
-				$("#mask").css("z-index","-1");
-				$(".midLine").css("width","1rem");
-				$(".midLine").css("opacity","1");
-				$(".topLine").css("top","0.75rem");
-				$(".topLine").css("transform","rotateZ(0deg) scale(1)");
-				$(".bottomLine").css("top","1.75rem");
-				$(".bottomLine").css("transform","rotateZ(0deg) scale(1)");
+				$("#mask").css("opacity", "0").css("z-index","-1");	
+				$(".midLine").css("width","1rem").css("opacity","1");
+				$(".topLine").css("top","0.75rem").css("transform","rotateZ(0deg) scale(1)");
+				$(".bottomLine").css("top","1.75rem").css("transform","rotateZ(0deg) scale(1)");
+				$("#searchButton").css("opacity","1");
 				sideSwitch = 0;
+			}
+		});
+		//搜索开关
+		var searchSwitch = 0;
+		$("#searchButton").click(function() {
+			if (searchSwitch == 0) {
+				$(".appTitle").css("opacity","0");
+				$(".searchInput").css("opacity","1").css("top","1.25rem").focus();
+				$(".searchOpen").css("opacity","0");
+				$(".searchClose").css("opacity","1");
+				searchSwitch = 1;
+			} else if (searchSwitch == 1) {
+				$(".appTitle").css("opacity","1");
+				$(".searchInput").css("top","-1rem").css("opacity","0").blur();
+				$(".searchOpen").css("opacity","1");
+				$(".searchClose").css("opacity","0");
+				searchSwitch = 0;
 			}
 		});
 	})
@@ -77,17 +73,33 @@
 				<div class="bottomLine"></div>
 			</div>
 		</div>
-		<div class="search">
-			<input type="text" name="search" placeholder="搜索">
+		<div id="searchButton">
+			<div class="buttonScale">
+				<div class="searchOpen"></div>
+				<div class="searchClose"></div>
+			</div>
 		</div>
-		<div class="user">
-			<div class="icon">
-				<p>玩转金院</p>
+		<div class="search">
+			<div class="appTitle">玩转金院</div>
+			<input class="searchInput" type="text" name="search" placeholder="搜索">
+		</div>
+		<div class="slideShow">
+			<div class="slider">
+			这里有轮播图
+				<a href="">
+					<div></div>
+				</a>
+				<a href="">
+					<div></div>
+				</a>
+				<a href="">
+					<div></div>
+				</a>
+				<a href="">
+					<div></div>
+				</a>
 			</div>
-			<div class="account">
-				<a href="">登录</a>
-				<a href="">注册</a>
-			</div>
+			<div class="slideNav"></div>
 		</div>
 		<div class="nav">
 			<a href="">
@@ -105,7 +117,15 @@
 		</div>		
 	</div>
 	<div id="sideNav">
-		侧边栏
+		<div class="user">
+			<div class="icon">
+				<p>玩转金院</p>
+			</div>
+			<div class="account">
+				<a href="">登录</a>
+				<a href="">注册</a>
+			</div>
+		</div>
 	</div>
 </body>
 </html>
