@@ -22,7 +22,7 @@
 		$("#sideNav").css("left",-wWin + "px");
 		//侧边栏按钮
 		var sideSwitch = 0;
-		$("#sideButton").click(function() {	
+		$("#sideButton").on("touchstart",function() {	
 			if (sideSwitch == 0) {
 				$("#sideNav").css("left","0");
 				$("#sideButton").css("left",wWin*0.89 + "px");
@@ -45,7 +45,7 @@
 		});
 		//搜索开关
 		var searchSwitch = 0;
-		$("#searchButton").click(function() {
+		$("#searchButton").on("touchstart",function() {
 			if (searchSwitch == 0) {
 				$(".appTitle").css("opacity","0");
 				$(".searchInput").css("opacity","1").css("top","1.25rem").focus();

@@ -83,6 +83,7 @@
 			right: 0;
 			z-index: 98;
 			transition: all .5s;
+			-webkit-tap-highlight-color:transparent;
 		}
 		.buttonScale {
 			width: 2.5rem;
@@ -240,6 +241,7 @@
 			width: 2.5rem;
 			background-color: transparent;
 			transition: all .6s;
+			-webkit-tap-highlight-color:transparent;
 		}
 		.line {
 			position: relative;
