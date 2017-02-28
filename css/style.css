@@ -140,11 +140,13 @@
 			border: none;
 		}
 		.slider {
-			font-size: 5rem;
+			font-size: 3rem;
 			text-align: center;
 			color: white;
 			height: 13rem;
-			background-color: #999;
+			background-color: transparent;
+			box-sizing: border-box;
+			border: 3px dashed white;
 		}
 		.nav {
 			position: relative;
