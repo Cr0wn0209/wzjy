@@ -157,13 +157,25 @@
 		.slideBoard {
 			position: absolute;
 			height: 15rem;
-			background-color: transparent;
+			background-color: white: 
 			border-radius: 10px;
 			display: none;
 			transition: all .6s;
 			left: -100%;
 			box-sizing: border-box;
-			border: 3px solid white;
+			background-size: 100%;
+		}
+		.slideBoard:nth-of-type(1) {
+			background-image: url(../pic/1.jpg);
+		}
+		.slideBoard:nth-of-type(2) {
+			background-image: url(../pic/2.jpg);
+		}
+		.slideBoard:nth-of-type(3) {
+			background-image: url(../pic/3.jpg);
+		}
+		.slideBoard:nth-of-type(4) {
+			background-image: url(../pic/4.jpg);
 		}
 		.slideNow {
 			left: 0;
@@ -255,16 +267,14 @@
 			background: linear-gradient(rgba(0,0,0,0),#666,rgba(0,0,0,0));
 			z-index: 2;
 		}
-		.nav > a {
+		.nav > .navButton {
 			position: relative;
-			display: block;
-			text-decoration: none;
 			height: 50%;
 			width: 50%;
 			float: left;
 			background-color: #eee;
 		}
-		.nav > a > p:nth-of-type(1) {
+		.nav > .navButton > p:nth-of-type(1) {
 			margin: 60% auto 0 auto;
 			width: 5rem;
 			text-align: center;
@@ -272,7 +282,7 @@
 			color: #555;
 			font-family: Microsoft YaHei;
 		}
-		.nav > a:before {
+		.nav > .navButton:before {
 			position: absolute;
 			margin-left: -1rem;
 			left: 50%;
@@ -280,19 +290,19 @@
 			font-size: 2rem;
 			color: #0cacff;
 		}
-		.nav > a:nth-of-type(1):before {
+		.nav > .navButton:nth-of-type(1):before {
 			font-family:"Metrize-Icons"; 
 			content: "\e0a9";
 		}
-		.nav > a:nth-of-type(2):before {
+		.nav > .navButton:nth-of-type(2):before {
 			font-family:"Metrize-Icons"; 
 			content: "\e000";
 		}
-		.nav > a:nth-of-type(3):before {
+		.nav > .navButton:nth-of-type(3):before {
 			font-family:"Metrize-Icons"; 
 			content: "\e0ac";
 		}
-		.nav > a:nth-of-type(4):before {
+		.nav > .navButton:nth-of-type(4):before {
 			font-family:"Metrize-Icons"; 
 			content: "\e0ad";
 		}

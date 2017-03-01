@@ -115,6 +115,9 @@
 					break;
 			}
 		}
+		$(".navButton").on("touchstart",function() {
+			window.location.href = "";
+		})
 	})
 	</script>
 </head>
@@ -140,10 +143,10 @@
 		</div>
 		<div class="slideShow">
 			<div class="slider">
-				<div class="slideBoard slideNow">1</div>
-				<div class="slideBoard slideNext">2</div>
-				<div class="slideBoard">3</div>
-				<div class="slideBoard">4</div>
+				<div class="slideBoard slideNow"></div>
+				<div class="slideBoard slideNext"></div>
+				<div class="slideBoard"></div>
+				<div class="slideBoard"></div>
 			</div>
 			<div class="slideNav">
 				<div class="navDotBar">
@@ -156,18 +159,18 @@
 			</div>
 		</div>
 		<div class="nav">
-			<a href="">
+			<div class="navButton">
 				<p>教务系统</p>
-			</a>
-			<a href="">
+			</div>
+			<div class="navButton">
 				<p>校园支付</p>
-			</a>
-			<a href="">
+			</div>
+			<div class="navButton">
 				<p>校园生活</p>
-			</a>
-			<a href="">
+			</div>
+			<div class="navButton">
 				<p>拓展应用</p>
-			</a>
+			</div>
 			<div class="clear"></div>
 		</div>
 		<div class="clear"></div>		
