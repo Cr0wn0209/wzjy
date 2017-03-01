@@ -24,6 +24,7 @@
 		body {
 			margin: 0;
 			padding: 0;
+			transition-timing-function: ease-in; 
 		}
 		@font-face {
             font-family: 'Metrize-Icons';
@@ -35,11 +36,15 @@
             font-weight: normal;
             font-style: normal;
         }
+        .clear {clear: both;}
         #page {
+        	position: relative;
         	background: -webkit-linear-gradient(#084fff,#08feff);
         	background: -o-linear-gradient(#084fff,#08feff);
         	background: -moz-linear-gradient(#084fff,#08feff);
         	background: linear-gradient(#084fff,#08feff);
+        	max-width: 640px;
+        	overflow: hidden;
         }
 		.search {
 			position: relative;
@@ -144,10 +149,77 @@
 			font-size: 3rem;
 			text-align: center;
 			color: white;
-			height: 13rem;
+			height: 15rem;
 			background-color: transparent;
 			box-sizing: border-box;
-			border: 3px dashed white;
+			overflow: hidden;
+		}
+		.slideBoard {
+			position: absolute;
+			height: 15rem;
+			background-color: transparent;
+			border-radius: 10px;
+			display: none;
+			transition: all .6s;
+			left: -100%;
+			box-sizing: border-box;
+			border: 3px solid white;
+		}
+		.slideNow {
+			left: 0;
+			display: block;
+		}
+		.slideNext {
+			left: 100%;
+			display: block;
+		}
+		.slideLast {
+			left: -100%;
+			display: block;
+		}
+		.slideNav {
+			position: absolute;
+			bottom: 0.5rem;
+			height: 1rem;
+		}
+		.navDotBar {
+			background-color: rgba(0,0,0,0.2);
+			position: relative;
+			height: 0.8rem;
+			width: 40%;
+			margin: 0 auto;
+			border-radius: 0.4rem;
+		}
+		.navDot {
+			position: absolute;
+			top: 50%;
+			width: 0.4rem;
+			height: 0.4rem;
+			background-color: rgba(0,0,0,0.1);
+			border-radius: 50%;
+			margin: -0.2rem 0 0 -0.2rem;
+		}
+		.navDot:nth-of-type(1) {
+			left: 5%;
+		}
+		.navDot:nth-of-type(2) {
+			left: 35%;
+		}
+		.navDot:nth-of-type(3) {
+			left: 65%;
+		}
+		.navDot:nth-of-type(4) {
+			left: 95%;
+		}
+		.navDotNow {
+			position: absolute;
+			top: 50%;
+			margin: -0.2rem 0 0 -0.2rem;
+			background-color: white;
+			border-radius: 50%;
+			width: 0.4rem;
+			height: 0.4rem;
+			transition: all .6s;
 		}
 		.nav {
 			position: relative;
@@ -285,11 +357,12 @@
 			color: #084fff;
 			z-index: 98;
 			transition: all .6s;
-			box-shadow: 1px 1px 1px #555;
+			box-shadow: 1px 0 5px #111;
+			max-width: 640px !important;
 		}
 		.user {
 			height: 15rem;
-			background-color: #555;
+			background-color: #333;
 		}
 		.icon {
 			position: absolute;
@@ -298,9 +371,9 @@
 			top: 3rem;
 			width: 6rem;
 			height: 6rem;
-			background-color: rgba(255,255,255,0.3);
+			background-color: rgba(0,0,0,0.2);
 			border-radius: 50%;
-			border: 1px solid #fff;
+			border: 2px solid #0cacff;
 		}
 		.icon > p {
 			font-size: 1.5rem;
@@ -333,5 +406,9 @@
 			content: "";
 			height: 0.5rem;
 			width: 0;
-			border: 1px solid #fff;
+			border: 1px solid #0cacff;
+		}
+		.noLog {
+			text-align: center;
+			color: #999;
 		}
