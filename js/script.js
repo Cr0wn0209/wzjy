@@ -109,9 +109,14 @@ $(function() {
 		}
 		$(".navButton").on("touchstart",function() {
 			window.location.href = "";
-		})
+		});
 		$("#loginButton").on("touchstart",function() {
-
+			$("#loginBoard").css("z-index","20").css("opacity","1");
+			$(".loginContent").css("opacity","1");
+		});
+		$(".loginCancle").on("touchstart",function() {
+			$("#loginBoard").css("z-index","-1").css("opacity","1");
+			$(".loginContent").css("opacity","0");
 		})
 		//localStorage.clear();
 	})

@@ -403,7 +403,7 @@
 			left: 50%;
 			top: 12rem;
 		}
-		.account > a {
+		.account > div {
 			display: block;
 			width: 50%;
 			text-decoration: none;
@@ -427,40 +427,87 @@
 			color: #999;
 		}
 		#loginBoard {
-			z-index: 20;
 			position: absolute;
 			top: 0;
-			background-color: rgba(0,0,0,0.5);
-			display: block;
+			background-color: rgba(0,0,0,0.2);
+			opacity: 0;
+			z-index: -1;
+			transition: all .5s;
 		}
 		.loginContent {
 			width: 20rem;
-			height: 25rem;
+			height: 16rem;
 			position: absolute;
-			margin: -12.5rem 0 0 -10rem;
+			margin: -8rem 0 0 -10rem;
 			top: 50%;
 			left: 50%;
 			z-index: 21;
 			background-color: white;
 			box-shadow: 0 0 15px black;
-			border-radius: 10px;
 			overflow: hidden;
+			opacity: 0;	
+			transition: all .5s;
 		}
 		.loginTitle{
 			height: 2.5rem;
-			background-color: #084fff;
+			background-color: #0C65FF;
 			color: white;
 			text-align: center;
 			box-sizing: border-box;
 			padding-top: 0.5rem;
 		}
 		.loginForm {
+			position: relative;
 			width: 15rem;
 			height: 5rem;
-			background-color: #555;
+			background-color: transparent;
+			margin: .5rem auto;
 		}
 		.loginForm input {
+			-webkit-appearance:none;
 			outline: none;
+			border: none;
 			box-sizing: border-box;
-			border: 2px solid #084fff;
+			padding: 0 1.3rem;
+			font-size: 1.3rem;
+			width: 15rem;
+			margin: .5rem auto;
+			background-color: transparent;
+		}
+		.loginbottomLine {
+			position: absolute;
+			margin: 0 0 0 -8.5rem;
+			left: 50%;
+			width: 17rem;
+			height: 1px;
+			background: -webkit-linear-gradient(left,rgba(0,0,0,0),#666,rgba(0,0,0,0));
+			background: -o-linear-gradient(left,rgba(0,0,0,0),#666,rgba(0,0,0,0));
+			background: -moz-linear-gradient(left,rgba(0,0,0,0),#666,rgba(0,0,0,0));
+			background: linear-gradient(left,rgba(0,0,0,0),#666,rgba(0,0,0,0));
+		}
+		.loginbottomLine:nth-of-type(1) {
+			top: 2.5rem;
+		}
+		.loginbottomLine:nth-of-type(2) {
+			top: 5rem;
+		}
+		.loginForm input[type="submit"] {
+			background-color: transparent;
+			font-family: Microsoft YaHei;
+			color: rgba(12,172,255,0.7);
+			height: 2.5rem;
+			font-size: 1rem;
+			box-sizing: border-box;
+			border: 1px solid rgba(12,172,255,0.7); 
+		}
+		.loginCancle {
+			background-color: transparent;
+			font-family: Microsoft YaHei;
+			color: #FF495C;
+			height: 2.5rem;
+			font-size: 1rem;
+			box-sizing: border-box;
+			border: 1px solid #FF495C;
+			text-align: center;
+			padding: 0.5rem 0;
 		}
