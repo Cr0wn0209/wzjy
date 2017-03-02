@@ -43,6 +43,7 @@
         .clear {clear: both;}
         #page {
         	position: fixed;
+        	top: 0;
         	background: -webkit-linear-gradient(#084fff,#08feff);
         	background: -o-linear-gradient(#084fff,#08feff);
         	background: -moz-linear-gradient(#084fff,#08feff);
