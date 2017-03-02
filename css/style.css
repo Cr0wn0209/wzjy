@@ -24,7 +24,8 @@
 		body {
 			margin: 0;
 			padding: 0;
-			transition-timing-function: ease-in; 
+			transition-timing-function: ease-in;
+			font-family: Microsoft YaHei; 
 		}
 		@font-face {
             font-family: 'Metrize-Icons';
@@ -35,6 +36,9 @@
                  url('../fonts/Metrize-Icons.svg#Metrize-Icons') format('svg');
             font-weight: normal;
             font-style: normal;
+        }
+        #noDisplay {
+        	display: none;
         }
         .clear {clear: both;}
         #page {
@@ -86,7 +90,7 @@
 			height: 2.5rem;
 			background-color: transparent;
 			right: 0;
-			z-index: 98;
+			z-index: 10;
 			transition: all .5s;
 			-webkit-tap-highlight-color:transparent;
 		}
@@ -318,7 +322,7 @@
 		#sideButton {
 			position: absolute;
 			left: 0;
-			z-index: 99;
+			z-index: 15;
 			height: 2.5rem;
 			width: 2.5rem;
 			background-color: transparent;
@@ -365,7 +369,7 @@
 			position: absolute;
 			top: 0;
 			color: #084fff;
-			z-index: 98;
+			z-index: 15;
 			transition: all .6s;
 			box-shadow: 1px 0 5px #111;
 			max-width: 640px !important;
@@ -421,4 +425,42 @@
 		.noLog {
 			text-align: center;
 			color: #999;
+		}
+		#loginBoard {
+			z-index: 20;
+			position: absolute;
+			top: 0;
+			background-color: rgba(0,0,0,0.5);
+			display: block;
+		}
+		.loginContent {
+			width: 20rem;
+			height: 25rem;
+			position: absolute;
+			margin: -12.5rem 0 0 -10rem;
+			top: 50%;
+			left: 50%;
+			z-index: 21;
+			background-color: white;
+			box-shadow: 0 0 15px black;
+			border-radius: 10px;
+			overflow: hidden;
+		}
+		.loginTitle{
+			height: 2.5rem;
+			background-color: #084fff;
+			color: white;
+			text-align: center;
+			box-sizing: border-box;
+			padding-top: 0.5rem;
+		}
+		.loginForm {
+			width: 15rem;
+			height: 5rem;
+			background-color: #555;
+		}
+		.loginForm input {
+			outline: none;
+			box-sizing: border-box;
+			border: 2px solid #084fff;
 		}
