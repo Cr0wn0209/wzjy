@@ -8,6 +8,7 @@ $(function() {
 			wWin = window.innerWidth;
 		hNav += hWin - hSearch - hUser; 
 		$(".nav").css("height",hNav + "px");
+		$("#page").css("width",wWin + "px");
 		var hPage = $("#page").height(),
 			wPage = $("#page").width();
 		$("#sideNav").css("height",hPage + "px");
