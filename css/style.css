@@ -83,6 +83,11 @@
 			text-align: center;
 			margin: -1rem 0 0 -5rem; 
 			transition: all .5s;
+			-webkit-user-select:none;
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
 		}
 		#searchButton {
 			position: absolute;
@@ -285,6 +290,11 @@
 			background-color: transparent;
 			color: #555;
 			font-family: Microsoft YaHei;
+			-webkit-user-select:none;
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
 		}
 		.nav > .navButton:before {
 			position: absolute;
@@ -385,7 +395,9 @@
 			top: 3rem;
 			width: 6rem;
 			height: 6rem;
-			background-color: rgba(0,0,0,0.2);
+			background-image: url(../pic/icon.gif);
+			background-size: 120%;
+			background-position: 50% 50%;
 			border-radius: 50%;
 			border: 2px solid #0cacff;
 		}
@@ -395,6 +407,7 @@
 			font-family: Microsoft YaHei;
 			margin: 1rem auto 0 auto;
 			color: #fff;
+			display: none;
 		}
 		.account {
 			position: absolute;
@@ -411,6 +424,11 @@
 			font-family: Microsoft YaHei;
 			float: left;
 			text-align: center;
+			-webkit-user-select:none;
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
 		}
 		.account:before {
 			position: absolute;

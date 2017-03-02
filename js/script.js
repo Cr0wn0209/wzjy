@@ -88,7 +88,7 @@ $(function() {
 			}
 			//alert(i);
 			changeSlideDot();
-			setTimeout(changeSlide,2500);
+			setTimeout(changeSlide,3000);
 		}
 		changeSlide();
 		//轮播图导航
